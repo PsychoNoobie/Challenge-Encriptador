@@ -1,27 +1,32 @@
 *{
-    margin: 0;
+    margin: 5px,5px,5px,5px;
     padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-
+.main-container h1{
+  background-color: pink;
+}
 
 /*Contenedor de la izquierda*/
 .container-left{
-    position: relative;
-    width: 100vw;
-    height: 100vh;
+    position: absolute;
+    width: 99%;
+    height: 88vh;
     background: white;
-    border-style: solid;
-    border: 2px solid;
-    border: black;
+    border: 5px solid red;
+    
+    
 }
 /*Text Area de la izquierda*/
 .txt{
     position: absolute;
-    width: 42%;
+    width: 46%;
     height: 60%;
-    left: 12%;
-    top: 15%;
+    left: 5%;
+    top: 10%;
     border: none;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-style: normal;
@@ -29,11 +34,16 @@
     font-size: 32px;
     line-height: 150%;
     background-color: white;
+    box-shadow: 0px 24px 32px -8px rgb(0, 0, 0,0.8);
+    resize: none;
+    border: 5px solid yellow;
     
 }
 
 .txt::placeholder{
     color: blue;
+    border: 5px solid violet;
+    font-size: 20px;
 }
 
 .txt:focus,
@@ -46,18 +56,19 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0px;
     gap: 8px;
     position: absolute;
-    width: 80%;
-    left: 12%;
-    top: 80%;
+    width: 46%;
+    left: 5%;
+    top: 73%;
+    border: 5px solid black;
 }
 
 .terminos p{
     font-weight: 400%;
-    font-size: 12px;
-    line-height: 150px;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 20px;
     color: black;
     opacity: 0.8;
     flex: none;
@@ -69,49 +80,97 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 1% 0;
+    justify-content: center;
+    padding: 1;
     position: absolute;
-    width: 80%;
-    left: 12%;
-    top: 88%;
+    width: 46%;
+    left: 5%;
+    top: 85%;
+    border: 5px solid skyblue;
+    margin-right: 16px;
+}
+
+.botones:last-child{
+  margin-right: 0px;
 }
 
 .btn-encriptar{
     align-items: center;
     justify-content: center;
-    padding: 2%;
+    padding: 3%;
     gap: 8px;
-    width: 25%;
-    background: green;
+    width: 30%;
+    margin-left: 10%;
+    margin-right: 10%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
     line-height: 20px;
     text-align: center;
-    color: white;
-    border-radius: 24px;
+    color: #fff;
+    
+    
+    
+    cursor: pointer;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+
 }
 
 .btn-desencriptar{
     align-items: center;
     justify-content: center;
-    padding: 2%;
+    padding: 3%;
     gap: 8px;
-    width: 25%;
+    width: 30%;
+    margin-left: 10%;
+    margin-right: 10%;
     background: green;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
     line-height: 20px;
     text-align: center;
     color: white;
-    border-radius: 24px;
+    
+    
+    
+
+    cursor: pointer;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
     
 }
 
 .btn-encriptar:hover,
 .btn-desencriptar:hover{
-    margin: 0.3%;
-    width: 25%;
-    padding: 1.8%;
+    /*margin-right: 16px;
+    width: 35%;
+    padding: 4%;*/
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-encriptar:focus,
+.btn-desencriptar:focus{
+    /*margin-right: 16px;
+    width: 35%;
+    padding: 4%;*/
+    outline: none;
+}
+
+.btn-encriptar,.btn-desencriptar {
+  background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+  box-shadow: 1 6px 15px 5 rgba(65, 132, 234, 0.75);
 }
 
 .container-right{
@@ -119,12 +178,13 @@
     justify-content: center;
     position: absolute;
     width: 30%;
-    height: 90%;
+    height: 80%;
     left: 60%;
-    top: 5%;
+    top: 14%;
     background: white;
     box-shadow: 0px 24px 32px -8px rgb(0, 0, 0,0.8);
     border-radius: 32px; 
+    border: 5px solid gray;
 }
 
 .alerta{
@@ -133,11 +193,14 @@
     align-items: center;
     justify-content: center;
     padding: 1%;
-    gap: 16px;
+    gap: 0px;
     position: absolute;
-    width: 100%;
-    top: 65%;
+    width: 95%;
+    top: 50%;
     text-align: center;
+    border: 5px solid greenyellow;
+    
+    
 }
 
 .alerta h2 {
@@ -146,9 +209,10 @@
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
-    line-height: 120%;
+    line-height: 100%;
     text-align: center;
     color: #343a40;
+    border: 5px solid greenyellow;
   }
   
   .alerta p {
@@ -157,18 +221,24 @@
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 150%;
+    line-height: 100%;
     text-align: center;
     color: #495057;
+    border: 5px solid greenyellow;
   }
   
   .imagen{
-    width: 100%;
-    height: auto;
+    width:60%;
+    height: 40%;
+    border: 5px solid green;
+    margin-top: 10%;
   }
   
+
+
   /* Diseño Responsivo */
-  @media (max-width: 1200px) {
+  /*
+  @media (max-width: 800px) {
     .container-left {
       display: flex;
       flex-direction: row;
@@ -221,4 +291,4 @@
       display: none;
       visibility: hidden;
     }
-  }
+  }*/
