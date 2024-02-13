@@ -1,9 +1,11 @@
 function encriptar() {
-    let texto = document.getElementById("texto").value;
+    let texto = document.getElementById("txt").value;
     let tituloalrt = document.getElementById("titulo-alerta");
     let parrafo = document.getElementById("parrafo");
     let imagen = document.getElementById("imagen");
   
+    console.log(texto);
+
     let textoCifrado = texto
       .replace(/e/gi, "enter")
       .replace(/i/gi, "imes")
@@ -12,7 +14,7 @@ function encriptar() {
       .replace(/u/gi, "ufat");
   
   if (texto.length != 0) {
-    document.getElementById("texto").value = textoCifrado;
+    document.getElementById("txt").value = textoCifrado;
     tituloalrt.textContent = 'Texto encriptado con exito';
     parrafo.textContent = "";
    // muñeco.src = "./img/encriptado.jpg";
@@ -22,16 +24,14 @@ function encriptar() {
     //muñeco.src = "./img/muñeco.png";
     tituloalrt.textContent = "Ningún mensaje fue encontrado";
     parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
-    swal("Ooops!", "Debes ingresar un texto", "warning");
+    alert("Ooops!", "Debes ingresar un texto", "warning");
   }
-
-
 }
   
 
 
   function desencriptar() {
-    let texto = document.getElementById("texto").value;
+    let texto = document.getElementById("txt").value;
     let tituloalrt = document.getElementById("titulo-alerta");
     let parrafo = document.getElementById("parrafo");
     let imagen = document.getElementById("imagen");
@@ -44,7 +44,7 @@ function encriptar() {
     .replace(/ufat/gi, "u");
   
   if (texto.length != 0) {
-    document.getElementById("texto").value = textoCifrado;
+    document.getElementById("txt").value = textoCifrado;
     tituloalrt.textContent = 'Texto encriptado con exito';
     parrafo.textContent = "";
    // muñeco.src = "./img/encriptado.jpg";
@@ -54,7 +54,7 @@ function encriptar() {
     //muñeco.src = "./img/muñeco.png";
     tituloalrt.textContent = "Ningún mensaje fue encontrado";
     parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
-    swal("Ooops!", "Debes ingresar un texto", "warning");
+    alert("Ooops!", "Debes ingresar un texto", "warning");
   }
 
 }

@@ -2,12 +2,18 @@
     margin: 0;
     padding: 0;
 }
-/*COntenedor de la izquierda*/
+
+
+
+/*Contenedor de la izquierda*/
 .container-left{
     position: relative;
     width: 100vw;
     height: 100vh;
     background: white;
+    border-style: solid;
+    border: 2px solid;
+    border: black;
 }
 /*Text Area de la izquierda*/
 .txt{
@@ -23,6 +29,7 @@
     font-size: 32px;
     line-height: 150%;
     background-color: white;
+    
 }
 
 .txt::placeholder{
@@ -155,15 +162,13 @@
     color: #495057;
   }
   
-  .alerta img {
-    position: absolute;
-    width: 80%;
-    height: 50%;
-    top: 15%;
+  .imagen{
+    width: 100%;
+    height: auto;
   }
-
+  
   /* Diseño Responsivo */
-  @media (max-width: 57.5em) {
+  @media (max-width: 1200px) {
     .container-left {
       display: flex;
       flex-direction: row;
