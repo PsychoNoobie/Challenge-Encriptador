@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./img/icono.png">
     <title>Empezando la pagina 1.0</title>
 </head>
 <body>
 
     <div class="main-container">
-        <center><h1 class="Titulo-Principal">Encryp/Decrupt 300</h1></center>
+            
         <div class="container-left">
             <div class="container-info">
-                <textarea name="txt" class="txt" id="txt" cols="30" rows="10" placeholder="Ingreso el texto aqui" type></textarea>
+                <textarea name="txt" class="txt" id="txt" cols="30" rows="10" placeholder="Ingrese el texto aqui" onclick="limpiartexto()"></textarea>
             </div>
             <div>
                 <div class="terminos">
@@ -28,17 +29,29 @@
         </div>
     
         <div class="container-right">
-            <img src="./img/img1.png" alt="Imagen" class="imagen">
+            <img src="./img/Welcome.png" alt="Imagen" class="imagen" id="imagen">
             <div class="alerta" id="alerta">
-                <h2 id="titulo-alerta">No se ha encontrado el mensaje</h2>
+                <h2 id="titulo-alerta">Bienvenidos</h2>
                 <p id="parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
                 <!--<textarea name="txt" class="txt" id="txt" cols="30" rows="10" placeholder="Ingreso el texto aqui" type></textarea>-->
             </div>
         </div>
 
+        <!-- <div class="container-right">
+            <img src="./img/img1.png" alt="Imagen" class="imagen">
+            <div class="alerta" id="alerta">
+                <h2 id="titulo-alerta">No se ha encontrado el mensaje</h2>
+                <p id="parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
+                <textarea name="txt" class="txt" id="txt" cols="30" rows="10" placeholder="Ingreso el texto aqui" type></textarea>
+            </div>
+        </div> -->
+
     </div>
     
 
+    
+
 </body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="script.js"></script>
 </html>

@@ -1,8 +1,10 @@
+let autolimpiar;
+
 function encriptar() {
     let texto = document.getElementById("txt").value;
     let tituloalrt = document.getElementById("titulo-alerta");
     let parrafo = document.getElementById("parrafo");
-    let imagen = document.getElementById("imagen");
+    let image = document.getElementById("imagen");
   
     console.log(texto);
 
@@ -17,15 +19,17 @@ function encriptar() {
     document.getElementById("txt").value = textoCifrado;
     tituloalrt.textContent = 'Texto encriptado con exito';
     parrafo.textContent = "";
-   // muñeco.src = "./img/encriptado.jpg";
+    image.src = "./img/encry.png";
+   
 
 
   } else {
-    //muñeco.src = "./img/muñeco.png";
+    image.src = "./img/notfound.png";
     tituloalrt.textContent = "Ningún mensaje fue encontrado";
     parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
     alert("Ooops!", "Debes ingresar un texto", "warning");
   }
+
 }
   
 
@@ -34,7 +38,7 @@ function encriptar() {
     let texto = document.getElementById("txt").value;
     let tituloalrt = document.getElementById("titulo-alerta");
     let parrafo = document.getElementById("parrafo");
-    let imagen = document.getElementById("imagen");
+    let image = document.getElementById("imagen");
   
     let textoCifrado = texto
     .replace(/enter/gi, "e")
@@ -45,16 +49,41 @@ function encriptar() {
   
   if (texto.length != 0) {
     document.getElementById("txt").value = textoCifrado;
-    tituloalrt.textContent = 'Texto encriptado con exito';
+    tituloalrt.textContent = 'Texto desencriptado con exito';
     parrafo.textContent = "";
-   // muñeco.src = "./img/encriptado.jpg";
+    image.src = "./img/des.png";
+    textoEncriptado = false;
 
 
   } else {
-    //muñeco.src = "./img/muñeco.png";
+    image.src = "./img/notfound.png";
     tituloalrt.textContent = "Ningún mensaje fue encontrado";
     parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
     alert("Ooops!", "Debes ingresar un texto", "warning");
   }
 
+}
+
+
+// Pendiente a modificar el tiempo de ejecucion
+//Cada vez que el usuario haga click, el timesetout
+//Debera reiniciarse
+function limpiartexto() {
+  setTimeout(function limpiartexto(){
+    document.querySelector ('#txt').value = '';
+}, 20000);
+recargarpagina();
+
+}
+
+function recargarpagina() {
+  let tituloalrt = document.getElementById("titulo-alerta");
+  let parrafo = document.getElementById("parrafo");
+  let image = document.getElementById("imagen");
+
+  setTimeout(function recargarpagina(){
+    tituloalrt.textContent = 'Bienvenidos';
+    parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
+    image.src = "./img/Welcome.png";
+}, 20000);
 }
