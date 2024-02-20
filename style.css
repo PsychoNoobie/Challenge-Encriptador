@@ -107,8 +107,8 @@
     padding: 3%;
     gap: 8px;
     width: 30%;
-    margin-left: 10%;
-    margin-right: 10%;
+    
+    margin-right: 5%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 20px;
     line-height: 20px;
@@ -128,8 +128,7 @@
     padding: 3%;
     gap: 8px;
     width: 30%;
-    margin-left: 10%;
-    margin-right: 10%;
+    
     background: green;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 20px;
@@ -228,6 +227,15 @@
     /* border: 5px solid green; */
     margin-top: 10%;
   }
+
+  .swal2-popup {
+    font-size: 25px !important;
+}
+
+
+
+
+
   
 /* Diseño Responsivo */
   
@@ -293,7 +301,7 @@
       display: flex;
       flex-direction: row;
       width: 95%;
-      height: 85vh;
+      height: 96%;
     }
     .container-info {
       width: 100%;
@@ -310,7 +318,9 @@
       top: 53%;
     }
     .terminos p {
-      font-size: 12px;
+      font-size: 18px;
+      font-weight: bold;
+      font-style: italic;
     }
     .botones {
       display: flex;

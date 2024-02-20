@@ -27,7 +27,13 @@ function encriptar() {
     image.src = "./img/notfound.png";
     tituloalrt.textContent = "Ningún mensaje fue encontrado";
     parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
-    alert("Ooops!", "Debes ingresar un texto", "warning");
+    Swal.fire({
+      title: "Ooops",
+      text: "No se ha ingresado ningun texto",
+      icon: "error",
+      confirmButtonText: 'Entendido'
+      
+    });
   }
 
 }
