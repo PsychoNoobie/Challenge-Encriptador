@@ -1,5 +1,3 @@
-let autolimpiar;
-
 function encriptar() {
     let texto = document.getElementById("txt").value;
     let tituloalrt = document.getElementById("titulo-alerta");
@@ -58,38 +56,39 @@ function encriptar() {
     tituloalrt.textContent = 'Texto desencriptado con exito';
     parrafo.textContent = "";
     image.src = "./img/des.png";
-    textoEncriptado = false;
+    
 
 
   } else {
     image.src = "./img/notfound.png";
     tituloalrt.textContent = "Ningún mensaje fue encontrado";
     parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
-    alert("Ooops!", "Debes ingresar un texto", "warning");
+    Swal.fire({
+      title: "Ooops",
+      text: "No se ha ingresado ningun texto",
+      icon: "error",
+      confirmButtonText: 'Entendido'
+      
+    });
+    
   }
-
 }
 
-
-// Pendiente a modificar el tiempo de ejecucion
-//Cada vez que el usuario haga click, el timesetout
-//Debera reiniciarse
-function limpiartexto() {
-  setTimeout(function limpiartexto(){
-    document.querySelector ('#txt').value = '';
-}, 20000);
-recargarpagina();
-
-}
-
-function recargarpagina() {
+function copiartexto() {
+  let texto = document.getElementById("txt").value;
   let tituloalrt = document.getElementById("titulo-alerta");
   let parrafo = document.getElementById("parrafo");
   let image = document.getElementById("imagen");
 
-  setTimeout(function recargarpagina(){
-    tituloalrt.textContent = 'Bienvenidos';
-    parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
-    image.src = "./img/Welcome.png";
-}, 20000);
+  try {
+    // navigator.clipboard.writeText(texto);
+    tituloalrt.textContent = 'Texto copiado con exito';
+    parrafo.textContent = "";
+    image.src = "./img/Copiado.png";
+    navigator.clipboard.writeText(texto);
+  } catch (error) {
+    console.log(error)
+  }
+
 }
+

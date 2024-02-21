@@ -1,3 +1,4 @@
+/* Parametros Generales */
 *{
     margin: 5px,5px,5px,5px;
     padding: 0;
@@ -19,13 +20,13 @@
 
     
 }
-/*Text Area de la izquierda*/
+/*Parametros para la seccion del text area de la izquierda*/
 .txt{
     position: absolute;
     width: 46%;
     height: 60%;
     left: 5%;
-    top: 10%;
+    top: 6%;
     border: none;
     color: rgb(10, 54, 111);
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -38,11 +39,11 @@
     background-color: white;
     box-shadow: 8px 24px 32px -3px rgba(8, 39, 82, 0.967);
     resize: none;
-    /* border: 5px solid yellow; */
     text-transform: lowercase;
     
     
 }
+
 
 .txt::placeholder{
     color: rgb(10, 54, 111);
@@ -58,6 +59,7 @@
     outline: none;
 }
 
+/*Parametros para la seccion de terminos*/
 .terminos{
     display: flex;
     flex-direction: row;
@@ -66,8 +68,7 @@
     position: absolute;
     width: 46%;
     left: 5%;
-    top: 73%;
-    /* border: 5px solid black; */
+    top: 70%;
 }
 
 .terminos p{
@@ -76,13 +77,13 @@
     font-style: italic;
     font-weight: bold;
     line-height: 20px;
-    /* color: black; */
     opacity: 0.8;
     flex: none;
     order: 1;
     flex-grow: 0;
 }
 
+/*Parametros para la seccion de los botones*/
 .botones{
     display: flex;
     flex-direction: row;
@@ -91,9 +92,7 @@
     padding: 1;
     position: absolute;
     width: 56%;
-  
-    top: 82%;
-    /* border: 5px solid skyblue; */
+    top: 80%;
     margin-right: 5px;
 }
 
@@ -101,71 +100,48 @@
   margin-right: 0px;
 }
 
-.btn-encriptar{
+.btn-encriptar,.btn-desencriptar,.btn-copiar{
     align-items: center;
     justify-content: center;
     padding: 3%;
     gap: 8px;
-    width: 30%;
-    
+    width: 25%;
     margin-right: 5%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 20px;
     line-height: 20px;
     text-align: center;
     color: #fff;
-    
     cursor: pointer;
     background-size: 300% 100%;
     border-radius: 50px;
     transition: all .4s ease-in-out;
 
-}
-
-.btn-desencriptar{
-    align-items: center;
-    justify-content: center;
-    padding: 3%;
-    gap: 8px;
-    width: 30%;
-    
-    background: green;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 20px;
-    line-height: 20px;
-    text-align: center;
-    color: white;
-    
-    cursor: pointer;
-    background-size: 300% 100%;
-    border-radius: 50px;
-    transition: all .4s ease-in-out;
-    
 }
 
 .btn-encriptar:hover,
-.btn-desencriptar:hover{
-    /*margin-right: 16px;
-    width: 35%;
-    padding: 4%;*/
+.btn-desencriptar:hover,
+.btn-copiar:hover{
+
     background-position: 100% 0;
     box-shadow: 0px 0px 32px 4px #04befe;
     transition: all .4s ease-in-out;
 }
 
 .btn-encriptar:focus,
-.btn-desencriptar:focus{
-    /*margin-right: 16px;
-    width: 35%;
-    padding: 4%;*/
+.btn-desencriptar:focus,
+.btn-copiar{
+
     outline: none;
 }
 
-.btn-encriptar,.btn-desencriptar {
+.btn-encriptar,.btn-desencriptar,.btn-copiar {
   background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
   box-shadow: 1 6px 15px 5 rgba(65, 132, 234, 0.75);
 }
 
+
+/*Contenedor de la parte derecha*/
 .container-right{
     display: flex;
     justify-content: center;
@@ -173,13 +149,14 @@
     width: 30%;
     height: 80%;
     left: 60%;
-    top: 10%;
+    top: 4%;
     background: white;
     box-shadow: 8px 24px 32px -3px rgba(8, 39, 82, 0.967);
     border-radius: 32px; 
-    /* border: 5px solid gray; */
+
 }
 
+/*Parametros para la seccion de avisos o alertas de la parte derecha. es donde se indica si el texto fue encriptado o no*/
 .alerta{
     display: flex;
     flex-direction: column;
@@ -191,7 +168,7 @@
     width: 95%;
     top: 50%;
     text-align: center;
-    /* border: 5px solid greenyellow; */
+
     
     
 }
@@ -206,7 +183,7 @@
     line-height: 100%;
     text-align: center;
     
-    /* border: 5px solid greenyellow; */
+
   }
   
   .alerta p {
@@ -218,13 +195,14 @@
     line-height: 100%;
     text-align: center;
     color: rgb(4, 44, 97);
-    /* border: 5px solid greenyellow; */
+
   }
   
+  /*Parametros para la seccion de las imagenes. estan arriba de las alertas*/
   .imagen{
     width:60%;
     height: 40%;
-    /* border: 5px solid green; */
+
     margin-top: 10%;
   }
 
@@ -232,8 +210,53 @@
     font-size: 25px !important;
 }
 
+/*Parametros para la seccion de pie de pagina*/
+.footer{
+  position: absolute;
+  top: 90%;
+  height: 8%;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  bottom: 0;
+  background-color: rgb(182, 222, 234);
+  border-radius: 20%;
+  
+  
+}
+
+.footer .contenido-footer{
+  text-align: center;
+  color: black;
+}
 
 
+.footer .contenido-footer a{
+  font-size: 40px;
+  color: inherit;
+  border: 1px solid #ccc;
+  width: 40px;
+  height: 20px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 8px;
+  opacity: 0.75; 
+}
+
+.footer .contenido-footer a:hover{
+  opacity: 0.9;
+}
+
+.footer .copyright{
+  
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  font-style: italic;
+  color: black;
+  
+}
 
 
   
@@ -262,21 +285,11 @@
       font-size: 16px;
     }
     .botones {
-      width: 80%;
+      width: 50%;
       left: 10%;
       top: 70%;
     }
-    /* .btn-encriptar,
-    .btn-desencriptar {
-      width: 48%;
-      border-radius: 16px;
-    }
-    .btn-encriptar:hover,
-    .btn-desencriptar:hover {
-      margin: 0.3%;
-      width: 47.5%;
-      padding: 1.8%;
-    } */
+    
     .container-right {
       width: 80%;
       height: 15%;
@@ -301,7 +314,7 @@
       display: flex;
       flex-direction: row;
       width: 95%;
-      height: 96%;
+      height: 98%;
     }
     .container-info {
       width: 100%;
@@ -315,7 +328,7 @@
     .terminos {
       width: 80%;
       left: 10%;
-      top: 53%;
+      top: 51%;
     }
     .terminos p {
       font-size: 18px;
@@ -323,14 +336,15 @@
       font-style: italic;
     }
     .botones {
-      display: flex;
+      display: inline-block;
       justify-content: space-around;
       width: 80%;
       left: 10%;
-      top: 65%;
+      top: 58%;
     }
     .btn-encriptar,
-    .btn-desencriptar {
+    .btn-desencriptar,
+    .btn-copiar {
       width: 100%;
       margin: 5px;
       border-radius: 16px;
@@ -339,14 +353,16 @@
 
     .container-right {
       width: 80%;
-      height: 10%;
+      height: 7%;
       left: 10%;
-      top: 77%;
+      top: 82%;
+      border: 2px solid blue;
     }
     .alerta {
       width: 100%;
       height: 90%;
       top: 4%;
+      border: 2px solid red;
     }
     .alerta h2{
       font-size: 15px;
@@ -360,6 +376,66 @@
       display: none;
       visibility: hidden;
     }
+
+    .footer{
+      position: absolute;
+      top: 90%;
+      height: 8%;
+      width: 80%;
+      margin-left: 5%;
+      margin-right: 15%;
+      bottom: 0;
+      background-color: transparent;
+      border-radius: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      
+    }
+    
+    .footer .contenido-footer{
+      text-align: center;
+      color: black;
+      display: flex;
+      align-items: center;
+    }
+    
+    
+    .footer .contenido-footer a{
+      font-size: 30px;
+      color: inherit;
+      border: 1px solid #ccc;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      border-radius: 50%;
+      margin: 8px;
+      opacity: 0.75; 
+    }
+    
+    .footer .contenido-footer p {
+      font-size: 18px; 
+      margin: 0; 
+    }
+
+    .footer .contenido-footer a:hover{
+      opacity: 0.9;
+    }
+    
+    .footer .copyright{
+      
+      text-align: center;
+      font-size: 25px;
+      font-weight: bold;
+      font-style: italic;
+      color: black;
+      
+    }
+
+
+
+
   }
 
   
