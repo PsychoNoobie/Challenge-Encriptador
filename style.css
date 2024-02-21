@@ -7,7 +7,6 @@
 }
 
 
-
 /*Contenedor de la izquierda*/
 .container-left{
     position: absolute;
@@ -215,19 +214,22 @@
   position: absolute;
   top: 90%;
   height: 8%;
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
+  width: 99%;
+  justify-content: center;
   bottom: 0;
-  background-color: rgb(182, 222, 234);
+  background-color: transparent;
   border-radius: 20%;
-  
+  align-items: center;
+  text-align: center;
+  display: flex;
+  border: 2px solid black;
   
 }
 
 .footer .contenido-footer{
-  text-align: center;
+  display: flex;
   color: black;
+  border: 2px solid red;
 }
 
 
