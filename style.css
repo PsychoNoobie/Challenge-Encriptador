@@ -222,14 +222,14 @@
   align-items: center;
   text-align: center;
   display: flex;
-  border: 2px solid black;
+  
   
 }
 
 .footer .contenido-footer{
   display: flex;
   color: black;
-  border: 2px solid red;
+  
 }
 
 
