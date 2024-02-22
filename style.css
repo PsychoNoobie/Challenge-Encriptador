@@ -356,14 +356,15 @@
       width: 80%;
       height: 7%;
       left: 10%;
-      top: 82%;
-      border: 2px solid blue;
+      top: 85%;
+      
     }
     .alerta {
       width: 100%;
       height: 90%;
-      top: 4%;
-      border: 2px solid red;
+      top: 8%;
+     
+      
     }
     .alerta h2{
       font-size: 15px;
@@ -380,7 +381,7 @@
 
     .footer{
       position: absolute;
-      top: 90%;
+      top: 93%;
       height: 8%;
       width: 80%;
       margin-left: 5%;
