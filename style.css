@@ -252,61 +252,12 @@
 .footer .copyright{
   
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   font-style: italic;
   color: black;
   
 }
-
-
-  
-/* Diseño Responsivo */
-  
-  @media (max-width: 800px) {
-    .container-left {
-      display: flex;
-      flex-direction: row;
-    }
-    .container-info {
-      width: 100%;
-    }
-    .txt {
-      width: 80%;
-      height: 60%;
-      left: 10%;
-      top: 5%;
-    }
-    .terminos {
-      width: 80%;
-      left: 10%;
-      top: 67%;
-    }
-    .terminos p {
-      font-size: 16px;
-    }
-    .botones {
-      width: 50%;
-      left: 10%;
-      top: 70%;
-    }
-    
-    .container-right {
-      width: 80%;
-      height: 15%;
-      left: 10%;
-      top: 80%;
-    }
-    .alerta {
-      width: 100%;
-      top: 5%;
-    }
-    .container-right img {
-      top: 0;
-      display: none;
-      visibility: hidden;
-    }
-  }
 
   /* Diseño Responsivo */
   
@@ -405,7 +356,7 @@
     
     
     .footer .contenido-footer a{
-      font-size: 30px;
+      font-size: 25px;
       color: inherit;
       border: 1px solid #ccc;
       width: 40px;
